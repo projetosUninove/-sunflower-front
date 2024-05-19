@@ -1,0 +1,61 @@
+.fc-bg-yellow {
+    background-color: #ffd60a;
+}
+
+.fc-bg-blue{
+    background-color: #001D3D;
+}
+
+.yellow {
+    color: #ffd60a;
+}
+
+.blue {
+    color: #001D3D;
+}
+
+.quadrado-az{
+    background-color: #001D3D;
+    width: 380px;
+    height: 500px;
+}
+
+.fs-24{
+    font-size: 24px;
+}
+
+.fa{
+    font-size: 70px;
+}
+
+.preto{
+    color: black;
+}
+
+.quadrado-am{
+    background-color: #FFD60A;
+    width: 380px;
+    height: 500px;
+}
+
+.margin{
+    margin-top: 90px;
+}
+
+.botton-y{
+    background-color: #FFD60A;
+    border-radius: 60px;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+
+
+.botton-a{
+    background-color: #001D3D;
+    border-radius: 60px;
+    width: 150px;
+    height: 40px;
+    border: none;
+}
+

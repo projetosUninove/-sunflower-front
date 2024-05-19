@@ -1,0 +1,128 @@
+<div class="container mt-5">
+	<div class="row">
+		<div class="col-md-4 d-flex align-items-center">
+			<div class="quadrado-am">
+				<div class="text-center margin">
+					<p class="fs-24 preto m-0">Cadastre</p>
+					<p class="fs-24 preto mb-4">uma nova categoria:</p>
+					<img src="https://i.imgur.com/QbR47x5.png" width="100px" height="100px" alt="">
+					<i class="fa-thin fa-box-taped"></i>
+				</div>
+				<div class=" mt-5 text-center">
+					<button class=" botton-a fonte text-white f-15 font-weight-bold"
+						routerLink="/categoria">Cadastrar</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="container">
+
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="text-center">Todas as Categorias</h2>
+					</div>
+				</div>
+
+				<div class="row mt-3 mb-5 d-flex justify-content-center">
+					<div class="col-md-6">
+
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col" class="text-center">Nome</th>
+									<th scope="col" class="text-center">Descrição</th>
+									<th scope="col" class="text-center">Controles</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr *ngFor='let item of listaCategorias'>
+									<th>{{item.id}}</th>
+									<td class="text-center">{{item.nomeCategoria}}</td>
+									<td class="text-center">{{item.descricaoCategoria}}</td>
+									<td class="d-flex justify-content-end">
+										<button class="btn fc-bg-blue text-white font-weight-bold mr-3"
+											[routerLink]="['/categoria-edit', item.id]">Editar</button>
+										<button class="btn fc-bg-yellow blue font-weight-bold"
+											[routerLink]="['/categoria-delete', item.id]">Apagar</button>
+									</td>
+
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+
+		</div>
+	</div>
+
+</div>
+
+<div class="container">
+	<div class="row">
+		<div class="col-md-4 d-flex align-items-start mt-3">
+			<div class="quadrado-az">
+				<div class="text-center margin">
+					<p class="fs-24 text-white m-0">Cadastre</p>
+					<p class="fs-24 text-white mb-4">um novo produto:</p>
+					<i class="fa fa-list-check text-white"></i>
+
+				</div>
+				<div class=" mt-5 text-center">
+					<button class=" botton-y fonte f-15 font-weight-bold blue"
+						routerLink="/cadastro-produto">Cadastrar</button>
+				</div>
+			</div>
+		</div>
+		<div class="col-md-8">
+			<div class="container">
+
+				<div class="row mt-5">
+					<div class="col-md-12">
+						<h2 class="text-center">Todos os produtos</h2>
+					</div>
+				</div>
+
+				<div class="row mt-3 mb-5 d-flex justify-content-center">
+					<div class="col-md-6">
+
+						<table class="table table-hover">
+							<thead>
+								<tr>
+									<th scope="col">#</th>
+									<th scope="col" class="text-center">Nome</th>
+									<th scope="col" class="text-center">Descrição</th>
+									<th scope="col" class="text-center">Preço</th>
+									<th scope="col" class="text-center">Controles</th>
+								</tr>
+							</thead>
+
+							<tbody>
+								<tr *ngFor='let item of listaProduto'>
+									<th>{{item.id}}</th>
+									<td class="text-center">{{item.nome}}</td>
+									<td class="text-center">{{item.descricao}}</td>
+									<td class="text-center">R${{item.preco}}</td>
+									<td class="d-flex justify-content-end">
+										<button class="btn fc-bg-blue text-white font-weight-bold mr-3"
+											[routerLink]="['/produto-edit', item.id]">Editar</button>
+										<button class="btn fc-bg-yellow blue font-weight-bold"
+											[routerLink]="['/produto-delete', item.id]">Apagar</button>
+									</td>
+
+								</tr>
+
+							</tbody>
+						</table>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+</div>

@@ -1,0 +1,43 @@
+ul.social-network{
+    list-style: none;
+    padding: 0;
+}
+
+ul.social-network li{
+    display: inline;
+    margin: 0;
+    padding: 5px;
+}
+
+.fa{
+    font-size: 30pt;
+    color: #ffffffff;
+    padding: 10px;
+}
+
+.fs-24{
+    font-size: 24px;
+}
+
+
+.fa-github{
+    color: #000000;
+}
+
+.fa-linkedin-square{
+    color: #0a66c2;
+}
+
+.color-rodape{
+
+    background-color: #E5E5E5;
+}
+
+.azul-padrao{
+    color: #14213d;
+
+}
+
+.rodape-azul{
+    background-color: #14213d;
+}

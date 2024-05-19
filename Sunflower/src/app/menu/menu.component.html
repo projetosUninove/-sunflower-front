@@ -1,0 +1,45 @@
+<div class="container-fluid" id="nav-inicio">
+    <nav class="navbar navbar-expand-lg navbar-light menu-sunflower">
+        <div class="container-fluid">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse menu" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto d-flex align-items-center menu">
+                    <li class="nav-item fs-24">
+                        <p class="m-0 mr-5 font-weight-bold menu fc-blue">Sunflower</p>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <a class="nav-link active negrito" id="home" aria-current="page" routerLink="/inicio">Home</a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <a class="nav-link active negrito" id="produtos" aria-current="page"
+                            routerLink="/produto">Produtos</a>
+                    </li>
+                    <li class="nav-item mt-2">
+                        <a class="nav-link active negrito" id="sobre" aria-current="page" routerLink="/sobre">Sobre
+                            nós</a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav d-flex align-items-center">
+                    <form class="form-inline my-2 my-lg-0">
+                        <input class="form-control mr-2" type="search" id="divBusca" aria-label="Search" placeholder="Pesquisar"/>
+                        <button class="pesquisar submit fs-16" href=""><i class="fa-solid fa-magnifying-glass"></i></button>
+                    </form>
+                </ul>
+
+                <ul class="navbar-nav ml-auto d-flex align-items-center">
+                    <li class="nav-item">
+                        <a class="fs-16 mr-4" routerLink="/entrar"><i class="zoom fa-regular fa-user"></i></a>
+                        <!-- <a class="fs-16 mr-4" routerLink="/carrinho"><i class="zoom fa fa-cart-shopping"></i></a> -->
+                        <a class="fs-16 mr-5" (click)="clickPainel()"><i class="zoom fa fa-gear"></i></a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+</div>

@@ -1,0 +1,132 @@
+<div class="container-fluid background">
+    <div class="container mb-4 pb-4">
+        <div class="row">
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h3 class="fc-yellow">45% OFF</h3>
+                        <a>
+                            <img class="card-img-top" src="https://i.imgur.com/PV4JDqE.jpeg"
+                                alt="Fonte de Água com Placa Solar">
+                        </a>
+                        <a class="text-reset">
+                            <h3 class="card-title display-4 fs-24 mt-3">Teclado Sem Fio com Placa Solar</h3>
+                        </a>
+                        <h6 class="fs-18">R$402.75<del class="text-muted ml-2 fs-18">R$895.00</del></h6>
+                        <!-- <button class="btn fc-bg-blue my-2 fc-bg-yellow"><b>Comprar</b></button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h3 class="fc-yellow">50% OFF</h3>
+                        <a>
+                            <img class="card-img-top" src="https://i.imgur.com/cRrzifh.jpeg"
+                                alt="Câmera de Segurança com Painel Solar">
+                        </a>
+                        <a class="text-reset">
+                            <h3 class="card-title display-4 fs-24 mt-3">Câmera de Segurança com Placa Solar</h3>
+                        </a>
+                        <h6 class="fs-18">R$1619.94<del class="text-muted ml-2 fs-18">R$3239.88</del></h6>
+                        <!-- <button class="btn fc-bg-blue my-2 fc-bg-yellow"><b>Comprar</b></button> -->
+                    </div>
+                </div>
+            </div>
+            <div class="col-12 col-sm-12 col-md-6 col-lg-4 col-xl-4 mt-4">
+                <div class="card shadow">
+                    <div class="card-body text-center">
+                        <h3 class="fc-yellow">60% OFF</h3>
+                        <a>
+                            <img class="card-img-top" src="https://i.imgur.com/tBpzpZy.jpeg" alt="">
+                        </a>
+                        <a class="text-reset">
+                            <h3 class="card-title display-4 fs-24 mt-3">Mochila de Camping com Placa Solar</h3>
+                        </a>
+                        <h6 class="fs-18">R$293.40<del class="text-muted ml-2 fs-18">R$489.99</del></h6>
+                        <!-- <button class="btn fc-bg-blue my-2 fc-bg-yellow"><b>Comprar</b></button> -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="container-fluid pt-4">
+
+    <nav>
+        <div class="nav nav-tabs d-flex justify-content-center " id="nav-tab" role="tablist">
+            <a class="nav-item nav-link active text-secondary" id="nav-todosProdutos" data-toggle="tab"
+                href="#todosProdutos" role="tab" aria-controls="nav-todosProdutos" aria-selected="true">Todos os
+                produtos</a>
+            <!-- <a class="nav-item nav-link text-secondary" id="nav-residencial" data-toggle="tab" href="#residencial"
+                role="tab" aria-controls="nav-residencial" aria-selected="false">Residencial</a>
+            <a class="nav-item nav-link text-secondary" id="nav-industrial" data-toggle="tab" href="#industrial"
+                role="tab" aria-controls="nav-industrial" aria-selected="false">Industrial</a> -->
+        </div>
+    </nav>
+
+    <div class="tab-content" id="nav-tabContent">
+        <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel"
+            aria-labelledby="nav-todosProdutos-tab">
+            <!-- <div class="row d-flex justify-content-center mt-4 mb-5">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <input type="text" class="form-control" id="titulo"
+                            placeholder="Digite o nome do produto para pesquisar" [(ngModel)]='nomeProdutos'
+                            (keyup)="findByNomeProdutos()">
+                    </div>
+                </div>
+            </div> -->
+
+            <div class="container mt-5">
+                <div class="row alinhamento">
+                    <div class="" *ngFor='let item of listaProdutos | orderBy: key : reverse'>
+                        <div class="card mt-4 card shadow pl-3 pr-3 pt-4 d-block" style="width: 18rem;">
+                            <img src="{{item.foto}}" class="card-img-top" alt="...">
+                            <div class="card-body">
+                                <h5 class="card-text fs-24">{{item.nome}}</h5>
+                                <p class="card-text">{{item.descricao}}</p>
+                                <p class="fs-18"><b>{{item.preco | currency: "BRL"}}</b></p>
+                                <div class="text-center">
+                                    <a class="btn fc-blue fc-bg-yellow" routerLink="/carrinho"
+                                        [routerLink]="['/carrinho', item.id]"><b>Comprar</b></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+        <!-- <div class="tab-pane fade" id="residencial" role="tabpanel" aria-labelledby="nav-residencial-tab">
+            <div class="tab-pane fade show active" id="todosProdutos" role="tabpanel"
+                aria-labelledby="nav-todosProdutos-tab">
+
+                <div class="container mt-5">
+                    <div class="row alinhamento">
+                        <div class="" *ngFor='let item of listaIndustrial'>
+                            <div class="card mt-4 card shadow pl-3 pr-3 pt-4" style="width: 18rem;">
+                                <img src="{{item.foto}}" class="card-img-top" alt="..." >
+                                <div class="card-body">
+                                  <h5 class="card-text fs-24">{{item.nome}}</h5>
+                                  <p class="card-text">{{item.descricao}}</p>
+                                  <p class="fs-18"><b>{{item.preco | currency: "BRL"}}</b></p>
+                                  <div class="text-center">
+                                    <a href="#" class="btn fc-blue fc-bg-yellow"><b>Comprar</b></a>
+                                  </div>
+                                </div>
+                              </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="tab-pane fade" id="industrial" role="tabpanel" aria-labelledby="nav-industrial-tab">
+
+        </div> -->
+    </div>
+</div>

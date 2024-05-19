@@ -1,0 +1,18 @@
+.text-color{
+    color: black;
+}
+
+.fc-bg-yellow {
+    background-color: #ffd60a;
+    width: 100px;
+}
+
+.fc-bg-blue{
+    background-color: #001D3D;
+    width: 100px;
+}
+
+.blue {
+    color: #001D3D;
+}
+
