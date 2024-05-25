@@ -18,23 +18,23 @@ export class CategoriaService {
   }
 
   getAllCategoria(): Observable<Categoria[]> {
-    return this.http.get<Categoria[]>('http://localhost:8080/categoria', this.token)
+    return this.http.get<Categoria[]>(environment.URL_BASE + "/categoria", this.token)
   }
 
   getByIdCategoria(id: number): Observable<Categoria> {
-    return this.http.get<Categoria>(`http://localhost:8080/categoria/${id}`, this.token)
+    return this.http.get<Categoria>(`${environment.URL_BASE}/categoria/${id}`, this.token)
   }
 
   postCategoria(categoria: Categoria): Observable<Categoria> {
-    return this.http.post<Categoria>('http://localhost:8080/categoria', categoria, this.token)
+    return this.http.post<Categoria>(environment.URL_BASE + "/categoria", categoria, this.token)
   }
 
   putCategoria(categoria: Categoria): Observable<Categoria> {
-    return this.http.put<Categoria>('http://localhost:8080/categoria', categoria, this.token)
+    return this.http.put<Categoria>(environment.URL_BASE + "/categoria", categoria, this.token)
   }
 
   deleteCategoria(id: number) {
-    return this.http.delete(`http://localhost:8080/categoria/${id}`, this.token)
+    return this.http.delete(`${environment.URL_BASE}/categoria/${id}`, this.token)
   }
 
 }

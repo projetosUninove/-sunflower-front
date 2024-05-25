@@ -4,5 +4,6 @@ export const environment = {
   nomeCompleto: "",
   idUsuario: 0,
   email: "",
-  tipo: ""
+  tipo: "",
+  URL_BASE: "https://sunflower-latest.onrender.com"
 };

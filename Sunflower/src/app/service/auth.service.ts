@@ -22,7 +22,7 @@ export class AuthService {
 
   userIsAdm() {
     console.log("this.userIsAdm" + environment.tipo);
-    
+
     if (environment.tipo == "adm") {
       return true
     }
@@ -30,7 +30,7 @@ export class AuthService {
   }
 
   entrar(usuarioLogin: UsuarioLogin): Observable<UsuarioLogin> {
-    return this.http.post<UsuarioLogin>("http://localhost:8080/usuario/logar", usuarioLogin).pipe(
+    return this.http.post<UsuarioLogin>(environment.URL_BASE + "/usuario/logar", usuarioLogin).pipe(
       map(response => {
         try {
           let teste = this.userIsAdm();
@@ -44,7 +44,7 @@ export class AuthService {
   }
 
   cadastrar(usuario: Usuario): Observable<Usuario> {
-    return this.http.post<Usuario>("http://localhost:8080/usuario/cadastrar", usuario);
+    return this.http.post<Usuario>(environment.URL_BASE + "/usuario/cadastrar", usuario);
   }
 
   logado() {
